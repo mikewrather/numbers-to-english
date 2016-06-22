@@ -1,0 +1,13 @@
+{
+  "name": "Headspace-development-solution",
+  "description": "Translates numbers to english from 0 to 1x10^27 and formats it nicely",
+  "version": "0.0.1",
+  "author": "Mike Wrather",
+
+  "main": "index.js",
+
+  "dependencies": {"typescript":"~1.8.10"},
+
+  "devDependencies": {}
+
+}
