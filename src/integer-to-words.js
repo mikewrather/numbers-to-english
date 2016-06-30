@@ -88,9 +88,9 @@ var IntegerToWords = (function () {
      */
     IntegerToWords.prototype.parseUnderThousand = function (digitArray) {
         // handles the case where the first digit is 0 because we don't want somethin like
-        // ten thousand, hundred and 54... we just want ten thousand, and 54
+        // ten thousand, hundred and fifty four... we just want ten thousand, fifty four
         var retVal = digitArray[0] > 0 ? this.wordLookup["singlesArray"][digitArray.shift()] + " hundred and " :
-            this.wordLookup["singlesArray"][digitArray.shift()] + " and ";
+            this.wordLookup["singlesArray"][digitArray.shift()] + " ";
         retVal += this.parseUnderHundred(digitArray);
         return retVal;
     };
