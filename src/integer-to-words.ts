@@ -7,7 +7,7 @@ class IntegerToWords {
     wordLookup : {[placement : string] : Array<string>} = {};
 
     constructor(num? : number){
-        this.populateWorkLookup();
+        this.populateWordLookup();
         if (num != undefined) {
             this.translateNumber(num);
         }
@@ -20,7 +20,7 @@ class IntegerToWords {
      * an index.
      * @returns {null}
      */
-    populateWorkLookup = () => {
+    populateWordLookup = () => {
 
         this.wordLookup["singlesArray"] = [
             "","one","two","three","four","five","six","seven","eight","nine",
@@ -93,8 +93,12 @@ class IntegerToWords {
      * @returns {string} - english representation of the numbers passed in
      */
     parseUnderThousand (digitArray : number[]) : string {
-        return this.wordLookup["singlesArray"][digitArray.shift()]
-            + " hundred and " + this.parseUnderHundred(digitArray);
+        // handles the case where the first digit is 0 because we don't want somethin like
+        // ten thousand, hundred and 54... we just want ten thousand, and 54
+        var retVal:string = digitArray[0] > 0 ? this.wordLookup["singlesArray"][digitArray.shift()] + " hundred and " :
+                                                this.wordLookup["singlesArray"][digitArray.shift()] + " and ";
+        retVal += this.parseUnderHundred(digitArray);
+        return retVal;
     };
 
     /**

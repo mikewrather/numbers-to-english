@@ -2,13 +2,12 @@
 
 I tried to accomplish the following with this implementation:
 
- * Use typescript to be in line with what you're js coders are using
+ * Use typescript to be in line with what your js coders are using
  * Write a class with structure so that the recursive element can be clear and concise
  * Include the edge cases we originally ignored like numbers between 10 and 20 -- things that originally caught me up.
  * While introducing some complexity and overhead with creating a class with separated concerns, it still performs as an O(n) operation
  * To use, simply clone the repository and run ```node index.js```
  * All typescript is already formatted into JS code.
-
 
 
 ### Using it

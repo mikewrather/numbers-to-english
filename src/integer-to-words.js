@@ -9,7 +9,7 @@ var IntegerToWords = (function () {
          * an index.
          * @returns {null}
          */
-        this.populateWorkLookup = function () {
+        this.populateWordLookup = function () {
             _this.wordLookup["singlesArray"] = [
                 "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
                 "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
@@ -46,7 +46,7 @@ var IntegerToWords = (function () {
             }
             return arrayOfThrees;
         };
-        this.populateWorkLookup();
+        this.populateWordLookup();
         if (num != undefined) {
             this.translateNumber(num);
         }
@@ -87,8 +87,12 @@ var IntegerToWords = (function () {
      * @returns {string} - english representation of the numbers passed in
      */
     IntegerToWords.prototype.parseUnderThousand = function (digitArray) {
-        return this.wordLookup["singlesArray"][digitArray.shift()]
-            + " hundred and " + this.parseUnderHundred(digitArray);
+        // handles the case where the first digit is 0 because we don't want somethin like
+        // ten thousand, hundred and 54... we just want ten thousand, and 54
+        var retVal = digitArray[0] > 0 ? this.wordLookup["singlesArray"][digitArray.shift()] + " hundred and " :
+            this.wordLookup["singlesArray"][digitArray.shift()] + " and ";
+        retVal += this.parseUnderHundred(digitArray);
+        return retVal;
     };
     ;
     /**
