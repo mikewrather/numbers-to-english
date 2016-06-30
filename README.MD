@@ -15,23 +15,23 @@ I tried to accomplish the following with this implementation:
 The index simply imports the class as a module and then loops through a series of numbers between 10 and some very large number to show how the format comes out.
 
 ```shell
-Translating the number: 3
-three
+Translating the number: 1
+one
 __________________________________
-Translating the number: 8034
-eight thousand, hundred and thirty four
+Translating the number: 7555
+seven thousand, five hundred and fifty five
 __________________________________
-Translating the number: 762811
-seven hundred and sixty two thousand, eight hundred and eleven
+Translating the number: 9023340
+nine million, twenty three thousand, three hundred and fourty
 __________________________________
-Translating the number: 5257304442
-five billion, two hundred and fifty seven million, three hundred and four thousand, four hundred and fourty two
+Translating the number: 1905168752
+one billion, nine hundred and five million, one hundred and sixty eight thousand, seven hundred and fifty two
 __________________________________
-Translating the number: 8665157677607
-eight trillion, six hundred and sixty five billion, one hundred and fifty seven million, six hundred and seventy seven thousand, six hundred and seven
+Translating the number: 710969653447
+seven hundred and ten billion, nine hundred and sixty nine million, six hundred and fifty three thousand, four hundred and fourty seven
 __________________________________
-Translating the number: 1550296766217799
-one quadrillion, five hundred and fifty trillion, two hundred and ninety six billion, seven hundred and sixty six million, two hundred and seventeen thousand, seven hundred and ninety nine
+Translating the number: 8177084489725531
+eight quadrillion, one hundred and seventy seven trillion, eighty four billion, four hundred and eighty nine million, seven hundred and twenty five thousand, five hundred and thirty one
 __________________________________
 ```
 
