@@ -35,4 +35,4 @@ eight quadrillion, one hundred and seventy seven trillion, eighty four billion, 
 __________________________________
 ```
 
-### Thanks for your time and for looking at my first go with TypeScript.  Looks like I cool language I'll enjoy using in the future.
+### Thanks for your time and for looking at my first go with TypeScript.  Looks like A cool language I'll enjoy using in the future.
